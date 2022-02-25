@@ -38,14 +38,13 @@ public class DaikichiController {
 	
 	@RequestMapping("/lotto/{number}")
 	public String lotto(@PathVariable int number) {
-		
+		// If the number is even, display text that says 'You will take a grand journey in the near future, but be weary of tempting offers'. 
+		// If it is odd, display text that says "You have enjoyed the fruits of your labor but now is a great time to spend time with family and friends."
 		if(number % 2 == 0) {
 		return "<h1 style = color:blue>You will take a grand journey in the near future, but be weary of tempting offers</h1>";
 		} 
 		else {
 			return "You have enjoyed the fruits of your labor but now is a great time to spend time with family and friends.";
-		// If the number is even, display text that says 'You will take a grand journey in the near future, but be weary of tempting offers'. 
-		// If it is odd, display text that says "You have enjoyed the fruits of your labor but now is a great time to spend time with family and friends."
 		}
 	}
 }
